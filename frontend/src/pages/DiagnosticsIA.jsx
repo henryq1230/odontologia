@@ -51,7 +51,7 @@ export default function DiagnosticsIA() {
           <h1>Centro de Diagnóstico IA</h1>
           <p className="subtitle">Módulo de Visión Artificial para Radiografías Dentales</p>
         </div>
-      </section>
+      </header>
 
       <div className="diagnostics-main-grid">
         {/* Left: Upload and Viewer */}
