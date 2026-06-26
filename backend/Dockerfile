@@ -27,5 +27,5 @@ COPY . /app/
 # Expose port
 EXPOSE 8000
 
-# Start django gunicorn server or manage runserver
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Run migrations and start development server
+CMD python manage.py migrate --noinput && python manage.py runserver 0.0.0.0:8000
