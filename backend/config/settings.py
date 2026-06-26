@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASE_URL = os.getenv('DATABASE_ROOT_URL', 'postgresql://postgres:postgres@localhost:5432/odontologia_master')
+DATABASE_URL = os.getenv('DATABASE_ROOT_URL') or os.getenv('DATABASE_URL') or 'postgresql://postgres:postgres@localhost:5432/odontologia_master'
 
 import urllib.parse as urlparse
 url = urlparse.urlparse(DATABASE_URL)
