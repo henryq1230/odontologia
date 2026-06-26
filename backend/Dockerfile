@@ -27,5 +27,5 @@ COPY . /app/
 # Expose port
 EXPOSE 8000
 
-# Run migrations and start development server
-CMD python manage.py migrate --noinput && python manage.py runserver 0.0.0.0:8000
+# Run migrations and start development server using dynamic Railway PORT
+CMD python manage.py migrate --noinput && python manage.py runserver 0.0.0.0:$PORT
