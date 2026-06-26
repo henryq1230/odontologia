@@ -1,0 +1,275 @@
+.diagnostics-view {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.diagnostics-header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.5rem;
+}
+
+.diagnostics-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.diagnostics-header .subtitle {
+  font-size: 0.95rem;
+  color: var(--on-surface-variant);
+  margin-top: 0.25rem;
+}
+
+.diagnostics-main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .diagnostics-main-grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Upload Placeholder */
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  border: 2px dashed var(--border);
+  border-radius: 0.375rem;
+  background-color: #fcfdfe;
+  gap: 1.25rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.upload-placeholder h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.upload-placeholder p {
+  font-size: 0.85rem;
+  color: var(--on-surface-variant);
+  max-width: 320px;
+}
+
+.btn-upload {
+  padding: 0.65rem 1.5rem;
+}
+
+/* Radiography Viewer */
+.radiography-viewer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.viewer-canvas {
+  position: relative;
+  width: 100%;
+  background-color: #0f172a;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #1e293b;
+  min-height: 380px;
+}
+
+.xray-image {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  display: block;
+}
+
+/* AI Overlay bounding boxes */
+.ai-overlay-box {
+  position: absolute;
+  border: 2px solid transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ai-overlay-box.red {
+  border-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.15);
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+}
+
+.ai-overlay-box.orange {
+  border-color: #f97316;
+  background-color: rgba(249, 115, 22, 0.15);
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.4);
+}
+
+.overlay-tooltip {
+  position: absolute;
+  bottom: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1e293b;
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.ai-overlay-box:hover .overlay-tooltip {
+  opacity: 1;
+}
+
+.viewer-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* AI Report Details Panel */
+.details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.prompt-analysis-card, .analysis-loading-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 300px;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--secondary);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.results-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.results-header h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.accuracy-pill {
+  padding: 0.25rem 0.75rem;
+  background-color: #ecfdf5;
+  color: #065f46;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 9999px;
+}
+
+.results-summary h4, .findings-list h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--on-surface-variant);
+  margin-bottom: 0.5rem;
+}
+
+.results-summary p {
+  font-size: 0.9rem;
+  color: var(--on-surface);
+  line-height: 1.6;
+}
+
+.findings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.finding-card {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+}
+
+.finding-card.alta {
+  border-left: 4px solid #ef4444;
+  background-color: #fef2f2;
+}
+
+.finding-card.leve {
+  border-left: 4px solid #f97316;
+  background-color: #fffbeb;
+}
+
+.finding-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.tooth-badge {
+  padding: 0.15rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.severity-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.severity-tag.alta { color: #b91c1c; }
+.severity-tag.leve { color: #c2410c; }
+
+.results-footer {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}

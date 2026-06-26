@@ -1,0 +1,207 @@
+.odontogram-view {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.odontogram-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.5rem;
+}
+
+.odontogram-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.odontogram-header .subtitle {
+  font-size: 0.95rem;
+  color: var(--on-surface-variant);
+  margin-top: 0.25rem;
+}
+
+.odontogram-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.success-toast {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #ecfdf5;
+  color: #065f46;
+  border-radius: 0.375rem;
+  border: 1px solid #a7f3d0;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Toolbar */
+.odontogram-toolbar {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.odontogram-toolbar h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--on-surface-variant);
+}
+
+.tool-selector-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tool-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border: 1px solid var(--border);
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tool-btn:hover {
+  background-color: var(--background);
+  border-color: var(--primary);
+}
+
+.tool-btn.active {
+  background-color: var(--secondary);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.color-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #737784;
+}
+
+.color-indicator.caries { background-color: #ef4444; }
+.color-indicator.restored { background-color: #2563eb; }
+
+.indicator-symbol {
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+/* Map Grid */
+.odontogram-map {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.arch {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.arch-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--on-surface-variant);
+  text-align: center;
+}
+
+.quadrants-row {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.quadrant {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.divider-line {
+  height: 1px;
+  background-color: var(--border);
+  width: 100%;
+}
+
+/* Tooth item design */
+.tooth-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.tooth-number {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--on-surface-variant);
+}
+
+.tooth-svg-wrapper {
+  position: relative;
+  border-radius: 4px;
+  padding: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.tooth-svg-wrapper:hover {
+  background-color: var(--background);
+}
+
+.tooth-svg polygon, .tooth-svg rect {
+  cursor: pointer;
+  transition: fill 0.15s ease;
+}
+
+.tooth-svg polygon:hover, .tooth-svg rect:hover {
+  opacity: 0.85;
+}
+
+/* Special states */
+.tooth-item.absent .tooth-svg {
+  opacity: 0.35;
+}
+
+.strike-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #ef4444;
+  transform: translateY(-50%) rotate(45deg);
+  pointer-events: none;
+}
+
+.tooth-item.crown .tooth-svg-wrapper {
+  border: 2px solid var(--accent);
+  background-color: rgba(255, 179, 0, 0.1);
+  border-radius: 50%;
+}

@@ -1,0 +1,25 @@
+# Python / Django
+backend/venv/
+backend/__pycache__/
+backend/*/__pycache__/
+*.pyc
+backend/.env
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Flutter / Mobile
+mobile/.dart_tool/
+mobile/build/
+mobile/.idea/
+mobile/*.iml
+mobile/pubspec.lock
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

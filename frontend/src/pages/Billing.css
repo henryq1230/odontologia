@@ -1,0 +1,230 @@
+.billing-view {
+  padding: 2.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  color: #1e293b;
+}
+
+.billing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.billing-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.25rem;
+}
+
+.financial-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.finance-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  border: 1px solid rgba(0, 50, 125, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 50, 125, 0.03);
+}
+
+.finance-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.finance-icon-box.green {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.finance-icon-box.amber {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.finance-icon-box.blue {
+  background-color: #e3f2fd;
+  color: #00327d;
+}
+
+.finance-info h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0.15rem 0;
+}
+
+.finance-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.finance-sub {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.billing-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.billing-card {
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 50, 125, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 50, 125, 0.03);
+}
+
+.card-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card-header-actions h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.billing-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.billing-table th,
+.billing-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+}
+
+.billing-table th {
+  font-weight: 600;
+  color: #64748b;
+  background-color: #f8fafc;
+}
+
+.invoice-amount {
+  color: #0f172a;
+}
+
+.insurance-pill {
+  font-size: 0.8rem;
+  background-color: #f1f5f9;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  color: #475569;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status-badge.pagado {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.status-badge.pendiente {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.insurance-card {
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 50, 125, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 50, 125, 0.03);
+}
+
+.insurance-card h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.section-description {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.insurance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.insurance-item {
+  background-color: #f8fafc;
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1.5px solid #f1f5f9;
+  transition: all 0.2s ease;
+}
+
+.insurance-item:hover {
+  border-color: #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.insurance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.insurance-header h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.coverage-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #00327d;
+}
+
+.insurance-details {
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.insurance-email {
+  display: block;
+  margin-top: 0.25rem;
+  color: #94a3b8;
+}
